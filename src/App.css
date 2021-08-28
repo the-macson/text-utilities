@@ -3,6 +3,7 @@
   font-size: 30px;
   padding: 12px;
   color: #fff;
+  overflow: hidden;
 }
 .textbox{
   width: 70%;
@@ -36,4 +37,14 @@
   background-color: #662FED;
   background-size: 100%;
   transition: background 1s;
+}
+.navbar a{
+  float: left;
+  text-decoration: none;
+  padding-left: 1em;
+  color: #fff;
+}
+.about{
+  margin: 1em;
+  font-size: 1.2em;
 }

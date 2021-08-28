@@ -10,7 +10,7 @@ const TextBox = () => {
     let newText = text.toUpperCase();
     setText(newText);
     toast.success("Your Text is converted into UpperCase", {
-      position: "bottom-center",
+      position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -23,7 +23,7 @@ const TextBox = () => {
     let newText = text.toLowerCase();
     setText(newText);
     toast.success("Your Text is converted into LowerCase", {
-      position: "bottom-center",
+      position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -38,7 +38,7 @@ const TextBox = () => {
   const HandleClear = () => {
     setText("");
     toast.success("Text is Cleared", {
-      position: "bottom-center",
+      position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -52,7 +52,7 @@ const TextBox = () => {
     text1.select();
     navigator.clipboard.writeText(text1.value);
     toast.success("Your Text is Copied", {
-      position: "bottom-center",
+      position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -65,7 +65,7 @@ const TextBox = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
     toast.success("Extra space is Removed", {
-      position: "bottom-center",
+      position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -85,46 +85,48 @@ const TextBox = () => {
   };
   return (
     <Container>
-      <h2>Type Your Text here for Analyzing</h2>
-      <div className="box">
-        <TextareaAutosize
-          id="myBox"
-          value={text}
-          onChange={ChangeFun}
-          className="textbox"
-          aria-label="minimum height"
-          minRows={15}
-          placeholder="Enter your text here"
-        />
-      </div>
-      <button className="btn1" onClick={ConvertUp}>
-        Convert to UpperCase 
-        <ToastContainer />
-      </button>
-      <button className="btn1" onClick={Convertlow}>
-        Convert to LowerCase
-      </button>
-
-      <button className="btn1" onClick={HandleClear}>
-        Clear Text
-      </button>
-
-      <button className="btn1" onClick={HandleCopy}>
-        Copy Text
-      </button>
-
-      <button className="btn1" onClick={HandleRemove}>
-        Remove extra Space
-      </button>
-
       <div>
-        <h2>Your Text Summary</h2>
-        <p>
-          <b>{WordsCount()}</b> words and <b>{text.length}</b> characters
-        </p>
-        <p>{0.008 * WordsCount()} Minutes read</p>
-        <h2>Privew</h2>
-        {text.length > 0 ? text : "Enter something to perview here"}
+        <h2>Type Your Text here for Analyzing</h2>
+        <div className="box">
+          <TextareaAutosize
+            id="myBox"
+            value={text}
+            onChange={ChangeFun}
+            className="textbox"
+            aria-label="minimum height"
+            minRows={15}
+            placeholder="Enter your text here"
+          />
+        </div>
+        <button className="btn1" onClick={ConvertUp}>
+          Convert to UpperCase
+          <ToastContainer />
+        </button>
+        <button className="btn1" onClick={Convertlow}>
+          Convert to LowerCase
+        </button>
+
+        <button className="btn1" onClick={HandleClear}>
+          Clear Text
+        </button>
+
+        <button className="btn1" onClick={HandleCopy}>
+          Copy Text
+        </button>
+
+        <button className="btn1" onClick={HandleRemove}>
+          Remove extra Space
+        </button>
+
+        <div>
+          <h2>Your Text Summary</h2>
+          <p>
+            <b>{WordsCount()}</b> words and <b>{text.length}</b> characters
+          </p>
+          <p>{0.008 * WordsCount()} Minutes read</p>
+          <h2>Privew</h2>
+          {text.length > 0 ? text : "Enter something to perview here"}
+        </div>
       </div>
     </Container>
   );
