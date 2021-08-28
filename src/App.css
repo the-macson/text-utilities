@@ -13,3 +13,27 @@
 .btn{
   margin: 10px;
 }
+.btn1{
+  width: auto;
+  margin: 1vh;
+  padding: 1.4vh;
+  background-color: #662FED;
+  border: 2px solid #fff;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 5px;
+  background-position: center;
+  transition: background 0.8s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.btn1:hover{
+  background-color: #fff;
+  color: #662FED;
+  font-weight: 400;
+}
+.btn1:active {
+  background-color: #662FED;
+  background-size: 100%;
+  transition: background 1s;
+}
