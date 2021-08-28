@@ -10,10 +10,10 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/about">
+          <Route exact path="/text-utilities/about">
             <About />
           </Route>
-          <Route exact path="/">
+          <Route exact path="/text-utilities">
             <TextBox />
           </Route>
         </Switch>
